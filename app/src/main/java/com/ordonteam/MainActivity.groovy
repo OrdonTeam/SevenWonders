@@ -8,6 +8,7 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 class MainActivity extends Activity {
+    TextView text
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +16,9 @@ class MainActivity extends Activity {
         LinearLayout linearLayout = new LinearLayout(this)
         linearLayout.setOrientation(LinearLayout.VERTICAL)
 
-        TextView view = new TextView(this)
-        view.setText('Hello Groovy')
-        linearLayout.addView(view)
+        text = new TextView(this)
+        text.setText('Hello Groovy')
+        linearLayout.addView(text)
 
         setContentView(linearLayout)
     }
