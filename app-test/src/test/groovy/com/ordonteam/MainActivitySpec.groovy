@@ -1,10 +1,8 @@
 package com.ordonteam
 
-import groovy.transform.CompileStatic
 import org.robolectric.Robolectric
 import pl.polidea.robospock.RoboSpecification
 
-@CompileStatic
 class MainActivitySpec extends RoboSpecification {
 
     def "Robospock should run"() {
