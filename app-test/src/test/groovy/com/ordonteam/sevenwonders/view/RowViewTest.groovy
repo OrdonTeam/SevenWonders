@@ -1,6 +1,7 @@
 package com.ordonteam.sevenwonders.view
 
 import android.text.InputType
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import org.robolectric.Robolectric
@@ -44,5 +45,28 @@ class RowViewTest extends RoboSpecification {
         rowView.editTexts[4].visibility == LinearLayout.GONE
         rowView.editTexts[5].visibility == LinearLayout.GONE
         rowView.editTexts[6].visibility == LinearLayout.GONE
+    }
+
+    def "RowView getValue return 0 at start "(){
+        given:
+        RoboAttributeSet attrs = new RoboAttributeSet(
+                [new Attribute("android.R:attr/inputType", "2", "com.ordonteam.sevenwonders"),
+                 new Attribute("android.R:attr/text", "title", "com.ordonteam.sevenwonders")], Robolectric.application.resources, RowView)
+        def rowView = new RowView(Robolectric.application, attrs)
+
+        expect:
+        rowView.getValue(1) == 0
+    }
+
+    def "RowView getValue return value 10 from input"(){
+        given:
+        RoboAttributeSet attrs = new RoboAttributeSet(
+                [new Attribute("android.R:attr/inputType", "2", "com.ordonteam.sevenwonders"),
+                 new Attribute("android.R:attr/text", "title", "com.ordonteam.sevenwonders")], Robolectric.application.resources, RowView)
+        def rowView = new RowView(Robolectric.application, attrs)
+        ((EditText)rowView.getChildAt(1)).setText("10")
+
+        expect:
+        rowView.getValue(1) == 10
     }
 }

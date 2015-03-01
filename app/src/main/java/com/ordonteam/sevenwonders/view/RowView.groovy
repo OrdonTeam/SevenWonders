@@ -49,8 +49,15 @@ class RowView extends LinearLayout {
     }
 
     int getValue(int column) {
-        EditText editText = (EditText) getChildAt(column + 1)
-        return editText.getText().toInteger() ?: 0
+        EditText editText = (EditText) getChildAt(column)
+        String value = editText.getText()?: 0
+        int intValue
+        if(value==""){
+            intValue = 0
+        } else {
+            intValue = value.toInteger()
+        }
+        return intValue
     }
 
     void setColumnsNumber(int number) {
@@ -76,16 +83,4 @@ class RowView extends LinearLayout {
             getChildAt(i).setVisibility(VISIBLE)
         }
     }
-
-    /*<!-- <TextView
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:text="@string/playerName" />
-
-    <EditText
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:inputType="text" />-->*/
 }
