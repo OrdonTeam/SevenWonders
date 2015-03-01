@@ -1,8 +1,10 @@
 package com.ordonteam.sevenwonders
 
 import android.app.Activity
+import android.app.Dialog
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.InjectView
 import com.arasthel.swissknife.annotations.OnClick
@@ -36,7 +38,9 @@ class MainActivity extends Activity {
             playerNumber.setText("${value-1}")
             rows.removeColumn()
         }
-        new DialogWindow(this)
+        new DialogWindow(this,{String newValue ->
+            Toast.makeText(this, newValue, Toast.LENGTH_LONG).show()
+        }).show()
     }
 
     @OnClick(R.id.plusButton)
