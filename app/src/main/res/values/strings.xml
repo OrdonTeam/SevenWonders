@@ -3,6 +3,7 @@
 
     <string name="app_name">Seven Wonders Calculator</string>
     <string name="playerName">Name</string>
+    <string name="playerNumber">2</string>
     <string name="warPoints">War Points</string>
     <string name="moneyPoints">Money Points</string>
     <string name="wonderPoints">Wonder Points</string>
@@ -13,4 +14,5 @@
     <string name="leaderPoints">Leader Points</string>
     <string name="sum">All Points</string>
     <string name="example">42</string>
+    <string name="calc">Calculate</string>
 </resources>
