@@ -6,16 +6,16 @@ import android.widget.LinearLayout
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class PlayerView extends LinearLayout{
-    PlayerView(Context context) {
+class RowView extends LinearLayout{
+    RowView(Context context) {
         super(context)
     }
 
-    PlayerView(Context context, AttributeSet attrs) {
+    RowView(Context context, AttributeSet attrs) {
         super(context, attrs)
     }
 
-    PlayerView(Context context, AttributeSet attrs, int defStyle) {
+    RowView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle)
     }
 }

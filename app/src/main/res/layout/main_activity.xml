@@ -2,72 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/labels"
+    <com.ordonteam.sevenwonders.view.RowView
+        android:id="@+id/rowLabels"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <TextView
-            android:text="@string/playerName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
         <TextView
             android:text="@string/warPoints"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <com.ordonteam.sevenwonders.view.PlayerView
-        android:id="@+id/player1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
         <EditText
             android:inputType="text"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="text"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </com.ordonteam.sevenwonders.view.RowView>
+
+    <com.ordonteam.sevenwonders.view.RowView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/warPoints"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <EditText
             android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.ordonteam.sevenwonders.view.PlayerView>
-
-    <com.ordonteam.sevenwonders.view.PlayerView
-        android:id="@+id/player2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-        <EditText
-            android:inputType="text"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <EditText
             android:inputType="number"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content" />
-    </com.ordonteam.sevenwonders.view.PlayerView>
-
-    <com.ordonteam.sevenwonders.view.PlayerView
-        android:id="@+id/player3"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical" >
-        <EditText
-            android:inputType="text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.ordonteam.sevenwonders.view.PlayerView>
-
+    </com.ordonteam.sevenwonders.view.RowView>
 </LinearLayout>
