@@ -55,7 +55,7 @@ class RowViewTest extends RoboSpecification {
         def rowView = new RowView(Robolectric.application, attrs)
 
         expect:
-        rowView.getValue(1) == 0
+        rowView.getValue(0) == 0
     }
 
     def "RowView getValue return value 10 from input"(){
@@ -64,9 +64,9 @@ class RowViewTest extends RoboSpecification {
                 [new Attribute("android.R:attr/inputType", "2", "com.ordonteam.sevenwonders"),
                  new Attribute("android.R:attr/text", "title", "com.ordonteam.sevenwonders")], Robolectric.application.resources, RowView)
         def rowView = new RowView(Robolectric.application, attrs)
-        ((EditText)rowView.getChildAt(1)).setText("10")
+        rowView.editTexts[0].setText("10")
 
         expect:
-        rowView.getValue(1) == 10
+        rowView.getValue(0) == 10
     }
 }

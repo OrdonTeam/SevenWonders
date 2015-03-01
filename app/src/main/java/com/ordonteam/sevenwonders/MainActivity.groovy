@@ -49,4 +49,9 @@ class MainActivity extends Activity {
         }
     }
 
+    @OnClick(R.id.calculate)
+    void calculateSum(){
+        rows.sum()
+    }
+
 }

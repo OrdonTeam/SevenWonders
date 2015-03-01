@@ -49,10 +49,9 @@ class RowView extends LinearLayout {
     }
 
     int getValue(int column) {
-        EditText editText = (EditText) getChildAt(column)
-        String value = editText.getText()?: 0
-        int intValue
-        if(value=="" || !value.isInteger()){
+        EditText editText = editTexts[column]
+        String value = editText.getText() ?: 0
+        if (value == "" || !value.isInteger()) {
             return 0
         } else {
             return value.toInteger()
@@ -81,5 +80,9 @@ class RowView extends LinearLayout {
         for (int i = 0; i <= columnsNumber; i++) {
             getChildAt(i).setVisibility(VISIBLE)
         }
+    }
+
+    void setSumAt(int column, int sum) {
+        editTexts[column].setText("$sum")
     }
 }
