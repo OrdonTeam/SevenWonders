@@ -12,26 +12,31 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:text="@string/playerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <LinearLayout
+    <com.ordonteam.sevenwonders.view.PlayerView
         android:id="@+id/player1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical" />
+        android:orientation="vertical">
 
-    <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ordonteam.sevenwonders.view.PlayerView>
+
+    <com.ordonteam.sevenwonders.view.PlayerView
         android:id="@+id/player2"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical" />
 
-    <LinearLayout
+    <com.ordonteam.sevenwonders.view.PlayerView
         android:id="@+id/player3"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
