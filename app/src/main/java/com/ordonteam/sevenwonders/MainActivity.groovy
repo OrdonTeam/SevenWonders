@@ -6,6 +6,7 @@ import android.widget.TextView
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.InjectView
 import com.arasthel.swissknife.annotations.OnClick
+import com.ordonteam.sevenwonders.dialog.DialogWindow
 import com.ordonteam.sevenwonders.view.RowView
 import com.ordonteam.sevenwonders.view.RowViews
 import groovy.transform.CompileStatic
@@ -34,6 +35,7 @@ class MainActivity extends Activity {
         if (value > 3 ){
             playerNumber.setText("${value-1}")
         }
+        new DialogWindow(this)
     }
 
     @OnClick(R.id.plusButton)
