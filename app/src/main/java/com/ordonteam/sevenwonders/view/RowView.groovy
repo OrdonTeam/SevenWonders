@@ -10,32 +10,28 @@ import com.ordonteam.sevenwonders.R
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class RowView extends LinearLayout{
-    private int columnsNumber
+class RowView extends LinearLayout {
+    private int columnsNumber = 3
     private String rowLabel
     private int inputType
-
-    RowView(Context context) {
-        super(context)
-        this.columnsNumber=3
-    }
+    private List<EditText> editTexts = new ArrayList<>()
 
     RowView(Context context, AttributeSet attrs) {
         super(context, attrs)
-        this.columnsNumber=3
         extractAttributes(context, attrs)
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,1)
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1)
         TextView textView = new TextView(context)
-        textView.setText(this.rowLabel)
+        textView.setText(rowLabel)
         textView.setLayoutParams(layoutParams)
         addView(textView)
-        EditText editText;
-        for(int i = 0; i <= 7; i++){
-            editText = new EditText(context)
-            editText.setInputType(this.inputType)
+        7.times {
+            EditText editText = new EditText(context)
+            editText.setInputType(inputType)
             editText.setLayoutParams(layoutParams)
             addView(editText)
+            editTexts.add(editText)
         }
+        updateVisibleColumns()
     }
 
     private extractAttributes(Context context, AttributeSet attrs) {
@@ -52,32 +48,32 @@ class RowView extends LinearLayout{
         }
     }
 
-    RowView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle)
-        this.columnsNumber=3
-        extractAttributes(context,attrs)
+    int getValue(int column) {
+        EditText editText = (EditText) getChildAt(column + 1)
+        return editText.getText().toInteger() ?: 0
     }
 
-    int getValue(int column){
-        EditText editText = (EditText)getChildAt(column+1)
-        return editText.getText().toInteger()?:0
+    void setColumnsNumber(int number) {
+        this.columnsNumber = number
+        updateVisibleColumns()
     }
 
-    void setColumnsNumber(int number){
-        this.columnsNumber=number
-    }
-
-    void addColumn(){
+    void addColumn() {
         this.columnsNumber++
+        updateVisibleColumns()
     }
 
-    void removeColumn(){
+    void removeColumn() {
         this.columnsNumber--
+        updateVisibleColumns()
     }
 
-    void updateVisibleColumns(){
-        for(int i = columnsNumber + 1; i <= 8; i++){
+    void updateVisibleColumns() {
+        for (int i = columnsNumber + 1; i <= 7; i++) {
             getChildAt(i).setVisibility(GONE)
+        }
+        for (int i = 0; i <= columnsNumber; i++) {
+            getChildAt(i).setVisibility(VISIBLE)
         }
     }
 
@@ -92,4 +88,4 @@ class RowView extends LinearLayout{
     android:layout_height="wrap_content"
     android:layout_weight="1"
     android:inputType="text" />-->*/
- }
+}

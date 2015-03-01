@@ -34,6 +34,7 @@ class MainActivity extends Activity {
         def value = playerNumber.getText().toInteger()
         if (value > 3 ){
             playerNumber.setText("${value-1}")
+            rows.removeColumn()
         }
         new DialogWindow(this)
     }
@@ -43,6 +44,7 @@ class MainActivity extends Activity {
         def value = playerNumber.getText().toInteger()
         if (value < 7 ){
             playerNumber.setText("${value+1}")
+            rows.addColumn()
         }
     }
 }
