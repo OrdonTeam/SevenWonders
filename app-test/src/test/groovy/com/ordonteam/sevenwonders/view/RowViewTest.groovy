@@ -1,9 +1,6 @@
 package com.ordonteam.sevenwonders.view
 
-import android.text.InputType
-import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.TextView
 import org.robolectric.Robolectric
 import org.robolectric.res.Attribute
 import org.robolectric.shadows.RoboAttributeSet

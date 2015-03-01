@@ -1,13 +1,16 @@
 package com.ordonteam.sevenwonders.view
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.TextView
 import com.ordonteam.sevenwonders.R
 import groovy.transform.CompileStatic
+
+import static com.ordonteam.sevenwonders.view.common.AttributeExtractor.extractIntAttribute
+import static com.ordonteam.sevenwonders.view.common.AttributeExtractor.extractStringAttribute
+import static com.ordonteam.sevenwonders.view.common.DefaultViews.weightedEditText
+import static com.ordonteam.sevenwonders.view.common.DefaultViews.weightedTextView
 
 @CompileStatic
 class RowView extends LinearLayout {
@@ -18,44 +21,21 @@ class RowView extends LinearLayout {
 
     RowView(Context context, AttributeSet attrs) {
         super(context, attrs)
-        extractAttributes(context, attrs)
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1)
-        TextView textView = new TextView(context)
-        textView.setText(rowLabel)
-        textView.setLayoutParams(layoutParams)
-        addView(textView)
+        inputType = extractIntAttribute(context, attrs, R.styleable.RowView_android_inputType)
+        rowLabel = extractStringAttribute(context, attrs, R.styleable.RowView_android_text)
+        addView(weightedTextView(context,rowLabel))
         7.times {
-            EditText editText = new EditText(context)
-            editText.setInputType(inputType)
-            editText.setLayoutParams(layoutParams)
+            EditText editText = weightedEditText(context,inputType)
             addView(editText)
             editTexts.add(editText)
         }
         updateVisibleColumns()
     }
 
-    private extractAttributes(Context context, AttributeSet attrs) {
-        TypedArray a = context.getTheme().obtainStyledAttributes(
-                attrs,
-                R.styleable.RowView,
-                0, 0)
-
-        try {
-            this.rowLabel = a.getString(R.styleable.RowView_android_text)
-            this.inputType = a.getInteger(R.styleable.RowView_android_inputType, 0)
-        } finally {
-            a.recycle()
-        }
-    }
 
     int getValue(int column) {
-        EditText editText = editTexts[column]
-        String value = editText.getText() ?: 0
-        if (value == "" || !value.isInteger()) {
-            return 0
-        } else {
-            return value.toInteger()
-        }
+        String value = editTexts[column].getText()
+        return value.isInteger() ? value.toInteger() : 0
     }
 
     void setColumnsNumber(int number) {
