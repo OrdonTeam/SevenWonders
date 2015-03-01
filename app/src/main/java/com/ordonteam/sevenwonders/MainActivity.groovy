@@ -1,15 +1,11 @@
 package com.ordonteam.sevenwonders
 
 import android.app.Activity
-import android.app.Dialog
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.InjectView
 import com.arasthel.swissknife.annotations.OnClick
-import com.ordonteam.sevenwonders.dialog.DialogWindow
-import com.ordonteam.sevenwonders.view.RowView
 import com.ordonteam.sevenwonders.view.RowViews
 import groovy.transform.CompileStatic
 
