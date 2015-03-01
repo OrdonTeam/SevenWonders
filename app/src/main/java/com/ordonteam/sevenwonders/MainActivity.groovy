@@ -38,9 +38,6 @@ class MainActivity extends Activity {
             playerNumber.setText("${value-1}")
             rows.removeColumn()
         }
-        new DialogWindow(this,{String newValue ->
-            Toast.makeText(this, newValue, Toast.LENGTH_LONG).show()
-        }).show()
     }
 
     @OnClick(R.id.plusButton)
@@ -51,4 +48,5 @@ class MainActivity extends Activity {
             rows.addColumn()
         }
     }
+
 }

@@ -2,6 +2,7 @@ package com.ordonteam.sevenwonders.dialog
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
@@ -17,10 +18,10 @@ class DialogWindow extends AlertDialog.Builder{
     private Closure callback
     private AlertDialog dialog
 
-    public DialogWindow(Activity activity, Closure callback) {
+    public DialogWindow(Context activity, Closure callback) {
         super(activity);
         this.callback = callback
-        LayoutInflater inflater = activity.getLayoutInflater();
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE )
         View view = inflater.inflate(R.layout.dialog_window, null);
         inputValue = (EditText) view.findViewById(R.id.inputValue)
         view.findViewById(R.id.confirmButton).setOnClickListener({
@@ -40,3 +41,5 @@ class DialogWindow extends AlertDialog.Builder{
         dialog.dismiss()
     }
 }
+
+
