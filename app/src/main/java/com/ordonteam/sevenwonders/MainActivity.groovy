@@ -2,24 +2,21 @@ package com.ordonteam.sevenwonders
 
 import android.app.Activity
 import android.os.Bundle
-import android.widget.LinearLayout
 import android.widget.TextView
+import com.arasthel.swissknife.SwissKnife
+import com.arasthel.swissknife.annotations.InjectView
 import groovy.transform.CompileStatic
 
 @CompileStatic
 class MainActivity extends Activity {
-    TextView text
+    @InjectView(R.id.textView)
+    TextView textView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState)
-        LinearLayout linearLayout = new LinearLayout(this)
-        linearLayout.setOrientation(LinearLayout.VERTICAL)
-
-        text = new TextView(this)
-        text.setText('Hello Groovy')
-        linearLayout.addView(text)
-
-        setContentView(linearLayout)
+        setContentView(R.layout.main_activity)
+        SwissKnife.inject(this)
+        textView.setText('Hello 7 Wonders')
     }
 }
