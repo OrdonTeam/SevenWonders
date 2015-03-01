@@ -24,13 +24,16 @@ class RowView extends LinearLayout{
         super(context, attrs)
         this.columnsNumber=3
         extractAttributes(context, attrs)
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.MATCH_PARENT,1)
         TextView textView = new TextView(context)
         textView.setText(this.rowLabel)
+        textView.setLayoutParams(layoutParams)
         addView(textView)
         EditText editText;
         for(int i = 0; i <= 7; i++){
             editText = new EditText(context)
             editText.setInputType(this.inputType)
+            editText.setLayoutParams(layoutParams)
             addView(editText)
         }
     }
