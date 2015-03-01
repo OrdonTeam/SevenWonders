@@ -19,9 +19,6 @@ class MainActivity extends Activity {
     @InjectView(R.id.rows)
     RowViews rows
 
-    @InjectView(R.id.rowLabels)
-    RowView rowLabels
-
     @InjectView(R.id.playerNumber)
     TextView playerNumber
 
