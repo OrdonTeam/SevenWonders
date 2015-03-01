@@ -52,12 +52,11 @@ class RowView extends LinearLayout {
         EditText editText = (EditText) getChildAt(column)
         String value = editText.getText()?: 0
         int intValue
-        if(value==""){
-            intValue = 0
+        if(value=="" || !value.isInteger()){
+            return 0
         } else {
-            intValue = value.toInteger()
+            return value.toInteger()
         }
-        return intValue
     }
 
     void setColumnsNumber(int number) {
