@@ -38,6 +38,7 @@
     </LinearLayout>
 
     <com.ordonteam.sevenwonders.view.RowViews xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/rows"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,242 +48,72 @@
             android:id="@+id/rowLabels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/playerName" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="text" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="text" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/playerName"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/warPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/warPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/moneyPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/moneyPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/wonderPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/wonderPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/bluePoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/bluePoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/yellowPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/yellowPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/purplePoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/purplePoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/greenPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/greenPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/leaderPoints" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="number" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/leaderPoints"
+            android:inputType="number"/>
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/sum" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/example" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/example" />
-        </com.ordonteam.sevenwonders.view.RowView>
+            android:orientation="horizontal"
+            custom:text="@string/sum"
+            android:inputType="number"/>
 
     </com.ordonteam.sevenwonders.view.RowViews>
 
