@@ -45,7 +45,7 @@ class RowView extends LinearLayout{
                 0, 0)
 
         try {
-            this.rowLabel = a.getString(R.styleable.RowView_text)
+            this.rowLabel = a.getString(R.styleable.RowView_android_text)
             this.inputType = a.getInteger(R.styleable.RowView_android_inputType, 0)
         } finally {
             a.recycle()
