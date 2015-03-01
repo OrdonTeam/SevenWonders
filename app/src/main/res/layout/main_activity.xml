@@ -6,12 +6,12 @@
 
     <com.ordonteam.sevenwonders.view.RowView
         android:id="@+id/rowLabels"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/warPoints"
+            android:text="@string/playerName"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
@@ -28,8 +28,8 @@
     </com.ordonteam.sevenwonders.view.RowView>
 
     <com.ordonteam.sevenwonders.view.RowView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
