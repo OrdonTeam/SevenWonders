@@ -3,5 +3,6 @@
 
     <string name="app_name">Seven Wonders Calculator</string>
     <string name="playerName">Name</string>
+    <string name="warPoints">War Points</string>
 
 </resources>

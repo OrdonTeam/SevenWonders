@@ -15,6 +15,10 @@
             android:text="@string/playerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/warPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <com.ordonteam.sevenwonders.view.PlayerView
@@ -24,7 +28,12 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <TextView
+        <EditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.ordonteam.sevenwonders.view.PlayerView>
@@ -34,13 +43,31 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+        <EditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ordonteam.sevenwonders.view.PlayerView>
 
     <com.ordonteam.sevenwonders.view.PlayerView
         android:id="@+id/player3"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+        <EditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.ordonteam.sevenwonders.view.PlayerView>
 
 </LinearLayout>
