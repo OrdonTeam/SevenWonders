@@ -5,10 +5,15 @@ import android.os.Bundle
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.InjectView
 import com.ordonteam.sevenwonders.view.RowView
+import com.ordonteam.sevenwonders.view.RowViews
 import groovy.transform.CompileStatic
 
 @CompileStatic
 class MainActivity extends Activity {
+
+    @InjectView(R.id.rows)
+    RowViews rows
+
     @InjectView(R.id.rowLabels)
     RowView rowLabels
 
