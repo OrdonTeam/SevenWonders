@@ -33,4 +33,17 @@ class AttributeExtractor {
             a.recycle()
         }
     }
+
+    static boolean extractBooleanAttribute(Context context, AttributeSet attrs, int id) {
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.RowView,
+                0, 0)
+
+        try {
+            return a.getBoolean(id, false)
+        } finally {
+            a.recycle()
+        }
+    }
 }

@@ -3,5 +3,6 @@
     <declare-styleable name="RowView">
         <attr name="android:text" />
         <attr name="android:inputType"/>
+        <attr name="isMinusable" format="boolean"/>
     </declare-styleable>
 </resources>

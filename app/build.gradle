@@ -6,7 +6,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'me.champeau.gradle:gradle-groovy-android-plugin:0.2.1'
-        classpath 'se.centril.robospock:gradle-plugin-robospock:0.2.0'
+        classpath 'se.centril.robospock:gradle-plugin-robospock:1.0.1'
     }
 }
 

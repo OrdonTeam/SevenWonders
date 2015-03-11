@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import com.ordonteam.sevenwonders.R
 import groovy.transform.CompileStatic
 
+import static com.ordonteam.sevenwonders.view.common.AttributeExtractor.extractBooleanAttribute
 import static com.ordonteam.sevenwonders.view.common.AttributeExtractor.extractIntAttribute
 import static com.ordonteam.sevenwonders.view.common.AttributeExtractor.extractStringAttribute
 import static com.ordonteam.sevenwonders.view.common.DefaultViews.weightedEditText
@@ -22,10 +23,12 @@ class RowView extends LinearLayout {
     RowView(Context context, AttributeSet attrs) {
         super(context, attrs)
         inputType = extractIntAttribute(context, attrs, R.styleable.RowView_android_inputType)
+        boolean isMinusable = extractBooleanAttribute(context, attrs, R.styleable.RowView_isMinusable)
         rowLabel = extractStringAttribute(context, attrs, R.styleable.RowView_android_text)
         addView(weightedTextView(context,rowLabel))
         7.times {
             EditText editText = weightedEditText(context,inputType)
+            if(isMinusable) editText.text = '-'
             addView(editText)
             editTexts.add(editText)
         }

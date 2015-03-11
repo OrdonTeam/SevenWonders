@@ -1,14 +1,10 @@
 package com.ordonteam.sevenwonders.dialog
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
-import com.arasthel.swissknife.SwissKnife
-import com.arasthel.swissknife.annotations.InjectView
-import com.arasthel.swissknife.annotations.OnClick
 import com.ordonteam.sevenwonders.R
 import groovy.transform.CompileStatic
 

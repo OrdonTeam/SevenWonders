@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/title" />
+
         <Button
             android:id="@+id/minusButton"
             android:layout_width="0dp"
@@ -23,10 +25,10 @@
             android:text="-" />
 
         <com.ordonteam.sevenwonders.view.MyInput
+            android:id="@+id/playerNumber"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/playerNumber"
             android:text="@string/playerNumber" />
 
         <Button
@@ -41,88 +43,88 @@
         android:id="@+id/rows"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <com.ordonteam.sevenwonders.view.RowView
             android:id="@+id/rowLabels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/playerName"
+            android:background="@color/black"
             android:inputType="text"
-            android:background="@color/black"/>
+            android:orientation="horizontal"
+            android:text="@string/playerName" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:inputType="number"
             android:orientation="horizontal"
             android:text="@string/warPoints"
-            android:inputType="number"
-            android:background="@color/red"/>
+            app:isMinusable="true" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/moneyPoints"
+            android:background="@color/gold"
             android:inputType="number"
-            android:background="@color/gold"/>
+            android:orientation="horizontal"
+            android:text="@string/moneyPoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/wonderPoints"
+            android:background="@android:color/darker_gray"
             android:inputType="number"
-            android:background="@android:color/darker_gray"/>
+            android:orientation="horizontal"
+            android:text="@string/wonderPoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/bluePoints"
+            android:background="@color/blu"
             android:inputType="number"
-            android:background="@color/blu"/>
+            android:orientation="horizontal"
+            android:text="@string/bluePoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/yellowPoints"
+            android:background="@color/yellow"
             android:inputType="number"
-            android:background="@color/yellow"/>
+            android:orientation="horizontal"
+            android:text="@string/yellowPoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/purplePoints"
+            android:background="@color/purpur"
             android:inputType="number"
-            android:background="@color/purpur"/>
+            android:orientation="horizontal"
+            android:text="@string/purplePoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/greenPoints"
+            android:background="@color/grin"
             android:inputType="number"
-            android:background="@color/grin"/>
+            android:orientation="horizontal"
+            android:text="@string/greenPoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:text="@string/leaderPoints"
+            android:background="@android:color/white"
             android:inputType="number"
-            android:background="@android:color/white"/>
+            android:orientation="horizontal"
+            android:text="@string/leaderPoints" />
 
         <com.ordonteam.sevenwonders.view.RowView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:orientation="horizontal"
-            android:text="@string/sum"
-            android:inputType="number"/>
+            android:text="@string/sum" />
 
     </com.ordonteam.sevenwonders.view.RowViews>
 
